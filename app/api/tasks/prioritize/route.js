@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
-import db from '../../../../server/db'
-import { getSession } from '../../../../server/auth'
+import db from '../../../server/db'
+import { getSession } from '../../../server/auth'
 
 function calcPriority(tasks, energy) {
   return tasks
