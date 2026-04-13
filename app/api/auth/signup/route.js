@@ -7,7 +7,7 @@ import { signToken } from '../../../server/auth'
 export async function POST(req) {
   const { email, password } = await req.json()
   if (!email || !password) return NextResponse.json({ error: 'required' }, { status: 400 })
-  if (password.length < 8) return NextResponse.json({ error: 'min 8 chars' }, { status: 400 })
+  if (password.length < 6) return NextResponse.json({ error: 'min 8 chars' }, { status: 400 })
 
   if (db.getUserByEmail(email)) return NextResponse.json({ error: 'already registered' }, { status: 409 })
 
