@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
-import db from '../../../../../server/db'
-import { getSession } from '../../../../../server/auth'
+import db from '../../../../server/db'
+import { getSession } from '../../../../server/auth'
 
 export async function POST(req, { params }) {
   const session = await getSession()

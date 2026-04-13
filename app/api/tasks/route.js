@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { nanoid } from 'nanoid'
-import db from '../../../server/db'
-import { getSession } from '../../../server/auth'
+import db from '../../server/db'
+import { getSession } from '../../server/auth'
 
 export async function POST(req) {
   const session = await getSession()
